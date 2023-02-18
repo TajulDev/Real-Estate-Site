@@ -16,11 +16,13 @@ body{
     --secondary--bg: linear-gradient(270deg, rgba(1, 101, 101, 0.4) 0%, rgba(1, 101, 101, 0.204) 100%);
 
     --text--primary: #FA5951;
+    --text-white : #fff;
 
     --font--poppins : 'Poppins', sans-serif;
     --font-jost : 'Jost', sans-serif;
 
     --font--20 : 20px;
+    --font--22 : 22px;
     --font--24 : 24px;
 
     --color1: #143A3A;
@@ -90,7 +92,7 @@ a.secondary__btn:hover{
 
 /* =====menu section css start here===== */
 .menu__section{ 
-   display: none;
+   /* display: none; */
     margin: 53px 0 64px;
 }  
 
@@ -117,9 +119,62 @@ a.secondary__btn:hover{
     font-weight: 500;
 }
 
+.menu ul li a.register {
+    color: #000;
+    padding: 16px 24px;
+    background: #fff;
+    box-shadow: 0px 12px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 .active{
     font-weight: 600 !important;
 }
+
+.menu__bar i{
+    font-size: var(--font--24);
+    cursor: pointer;
+}
+
+/* mobile menu */
+.mobile__menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0px 12px 60px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    padding: 40px;
+    z-index: 9999;
+    transform: translateX(-150%);
+    transition: all 0.3s ease-in-out;
+}
+
+.show{transform: translateX(0);}
+
+.mobile__menu i{
+    font-size: var(--font--24);
+    cursor: pointer;
+}
+
+.mobile__menu ul{padding: 0; margin: 0;}
+.mobile__menu ul li{list-style: none; margin-bottom: 30px;}
+.mobile__menu ul li a{font-size: var(--font--24); color: #000; font-weight: 500;}
+.mobile__menu ul li.social__link{width: 250px;}
+.mobile__menu ul li.social__link a{width: 50px; height: 50px; line-height: 50px; text-align: center; background: var(--color1); color: #fff; border-radius: 50%;}
+/* mobile menu */
+
+@media screen and (max-width: 767px) {
+    .mobile__menu{
+        padding: 20px;
+        width: 100%;
+    }
+    .mobile__menu ul li.social__link{width: 220px;}
+    .mobile__menu ul li.social__link a{width: 42px; height: 42px; line-height: 42px;}
+}
+
+
 /* =====menu section css end here===== */
 
 
@@ -337,3 +392,114 @@ a.secondary__btn:hover{
     }
 }
 /* =====compare section css end here===== */
+
+/* =====review section css start here===== */
+.review__inner{
+    font-family: var(--font--poppins);
+}
+
+.review__inner .box__title{
+    margin-bottom: 48px;
+}
+
+.review__box{
+    padding: 32px;
+    background: var(--primary--bg);
+    color: var(--text-white);
+    border-radius: 40px;
+}
+
+.review__box .profile{
+    padding-bottom: 27px;
+    margin-bottom: 27px;
+    position: relative;
+}
+
+.review__box .profile::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.review__box .profile__info p{
+    font-size: var(--font--22);
+    font-weight: 600;
+    /* color: var(--text-white); */
+}
+
+.review__box .profile__info span{
+    font-size: var(--font--20);
+    /* color: var(--text-white); */
+}
+
+.profile__content p{
+    font-size: var(--font--20);
+    line-height: 30px;
+    font-weight: 300;
+}
+/* =====review section css end here===== */
+
+/* =====quote section css start here===== */
+.quote__section{
+    padding: 40px 0;
+}
+
+.quote__inner{
+    width: 100%;
+    max-width: 936px;
+    margin: auto;
+}
+
+.quote__inner p{
+    font-size: var(--font--20);
+    line-height: 30px;
+    color: #143A3A;
+    opacity: 0.6;
+    margin: 32px 0;
+}
+/* =====quote section css end here===== */
+
+
+/* =====footer section css start here===== */
+.footer__section{
+    padding: 80px 0;
+    background: var(--color1);
+    font-family: var(--font--poppins);
+    color: #fff;
+}
+
+.footer__inner ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer__inner img{
+    margin-bottom: 25px;
+}
+
+.footer__inner h5{
+    font-size: var(--font--24);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.footer__inner p{
+    font-weight: 400;
+}
+
+.footer__inner ul li{
+    margin-bottom: 25px;
+}
+
+.footer__inner ul li a{
+    color: var(--text-white);
+    font-size: 19px;
+    font-weight: 300;
+}
+/* =====footer section css end here===== */
